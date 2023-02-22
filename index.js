@@ -31,14 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.createElement('h2')
             const gender = document.createElement('h3')
             const status = document.createElement('h3')
+            const species = document.createElement('h3')
             img.src = card[8]
             name.textContent = card[1]
             gender.textContent = `Gender: ${card[5]}`
             status.textContent = `Current status on the show: ${card[2]}`
+            species.textContent = `Species: ${card[3]}`
             post.append(img)
             post.append(name)
             post.append(gender)
             post.append(status)
+            post.append(species)
         })
     })
 
