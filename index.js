@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             const card = Object.values(data)
-            console.log(card)
-            // Cars should display character image, name, gender, status and species.
             const post = document.getElementById('characterCard')
             const img = document.createElement('img')
             const name = document.createElement('h2')
