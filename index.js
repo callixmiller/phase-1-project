@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(data => {
             let array = data.results
-            console.log(array)
             const characters = array.map((obj) => obj.name)
             const ol = document.getElementById('characters')
             characters.map(name => {
