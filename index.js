@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const post = document.getElementById('characterCard')
             const img = document.createElement('img')
             const name = document.createElement('h2')
+            const gender = document.createElement('h3')
             img.src = card[8]
             name.textContent = card[1]
+            gender.textContent = `Gender: ${card[5]}`
             post.append(img)
             post.append(name)
+            post.append(gender)
         })
     })
 
