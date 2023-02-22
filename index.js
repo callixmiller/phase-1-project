@@ -25,10 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const card = Object.values(data)
             console.log(card)
+            // Cars should display character image, name, gender, status and species.
             const post = document.getElementById('characterCard')
             const img = document.createElement('img')
+            const name = document.createElement('h2')
             img.src = card[8]
+            name.textContent = card[1]
             post.append(img)
+            post.append(name)
         })
     })
 
