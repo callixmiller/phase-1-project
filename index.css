@@ -6,3 +6,9 @@ body {
     background-color: grey;
     color: white;
 }
+
+#characters {
+    list-style-position: inside;
+    margin-left: 45%;
+    text-align: left;
+}
