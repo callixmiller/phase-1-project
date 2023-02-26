@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         characterInfo.reset()
     })
 
-    document.addEventListener('click', e => {
+    const characterList = document.querySelector('ol')
+    characterList.addEventListener('click', e => {
         if(e.target.matches('li')) {
             e.target.style.color = 'red'
         }
