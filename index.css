@@ -22,6 +22,7 @@ body {
 }
 
 img {
+    border: black 2px solid;
     border-radius: 50px;
     margin-top: 5px;
 }
