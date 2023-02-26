@@ -5,8 +5,12 @@ body {
 }
 
 #characterCard {
+    align-items: center;
     color: white;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 #characters {
