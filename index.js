@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             post.append(status)
             post.append(species)
         })
+        characterInfo.reset()
     })
 
     document.addEventListener('click', e => {
@@ -48,6 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.style.color = 'red'
         }
     })
-
+  
     getCharacters()
 } )
