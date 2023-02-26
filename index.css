@@ -5,14 +5,8 @@ body {
 }
 
 #characterCard {
-    background-color: grey;
-    border: solid;
-    border-color: black;
-    border-radius: 50px;
-    border-width: thick;
     color: white;
     display: inline-block;
-    width: 315px;
 }
 
 #characters {
@@ -21,8 +15,18 @@ body {
     text-align: left;
 }
 
+.character {
+    background-color: grey;
+    border: solid;
+    border-color: black;
+    border-radius: 50px;
+    border-width: thick;
+    margin: 10px;
+    width: 315px;
+}
+
 img {
-    border: black 2px solid;
+    border: black 2px double;
     border-radius: 50px;
     margin-top: 5px;
 }
