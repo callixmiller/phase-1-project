@@ -3,5 +3,6 @@ body {
 }
 
 #characterCard {
+    background-color: grey;
     color: white;
 }
