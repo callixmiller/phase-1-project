@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             const card = Object.values(data)
             const post = document.getElementById('characterCard')
+            const div = document.createElement('div')
+            div.classList.add('character')
             const img = document.createElement('img')
             const name = document.createElement('h2')
             const gender = document.createElement('h3')
@@ -35,7 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gender.textContent = `Gender: ${card[5]}`
             status.textContent = `Current status on the show: ${card[2]}`
             species.textContent = `Species: ${card[3]}`
-            post.append(img, name, gender, status, species)
+            div.append(img, name, gender, status, species)
+            post.append(div)
         })
         characterInfo.reset()
     })
