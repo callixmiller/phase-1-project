@@ -6,7 +6,9 @@ body {
 #characterCard {
     background-color: grey;
     border: solid;
+    border-color: black;
     border-radius: 50px;
+    border-width: thick;
     color: white;
     display: inline-block;
     width: 315px;
