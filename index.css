@@ -5,6 +5,7 @@ body {
 
 #characterCard {
     background-color: grey;
+    border: solid;
     border-radius: 50px;
     color: white;
     display: inline-block;
@@ -15,6 +16,10 @@ body {
     list-style-position: inside;
     margin-left: 40%;
     text-align: left;
+}
+
+div {
+    margin: 0px;
 }
 
 img {
