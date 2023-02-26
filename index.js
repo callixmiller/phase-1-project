@@ -35,11 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gender.textContent = `Gender: ${card[5]}`
             status.textContent = `Current status on the show: ${card[2]}`
             species.textContent = `Species: ${card[3]}`
-            post.append(img)
-            post.append(name)
-            post.append(gender)
-            post.append(status)
-            post.append(species)
+            post.append(img, name, gender, status, species)
         })
         characterInfo.reset()
     })
