@@ -31,12 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const gender = document.createElement('h3')
             const status = document.createElement('h3')
             const species = document.createElement('h3')
+            const origin = document.createElement('h3')
             img.src = data.image
             name.textContent = data.name
             gender.textContent = `Gender: ${data.gender}`
             status.textContent = `Status: ${data.status}`
             species.textContent = `Species: ${data.species}`
-            div.append(img, name, gender, status, species)
+            origin.textContent = `Origin: ${data.origin.name}`
+            div.append(img, name, gender, status, species, origin)
             post.append(div)
         })
         characterInfo.reset()
