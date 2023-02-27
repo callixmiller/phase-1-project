@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch(characterURL)
         .then(res => res.json())
         .then(data => {
-            const card = Object.values(data)
             const post = document.getElementById('characterCard')
             const div = document.createElement('div')
             div.classList.add('character')
@@ -32,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const gender = document.createElement('h3')
             const status = document.createElement('h3')
             const species = document.createElement('h3')
-            img.src = card[8]
-            name.textContent = card[1]
-            gender.textContent = `Gender: ${card[5]}`
-            status.textContent = `Current status on the show: ${card[2]}`
-            species.textContent = `Species: ${card[3]}`
+            img.src = data.image
+            name.textContent = data.name
+            gender.textContent = `Gender: ${data.gender}`
+            status.textContent = `Status: ${data.status}`
+            species.textContent = `Species: ${data.species}`
             div.append(img, name, gender, status, species)
             post.append(div)
         })
