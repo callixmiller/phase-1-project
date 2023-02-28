@@ -18,20 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
     characterInfo.addEventListener('submit', e => {
         e.preventDefault()
         
+        const div = document.createElement('div')           
+        const img = document.createElement('img')          
+        const name = document.createElement('h2')          
+        const gender = document.createElement('h3')        
+        const status = document.createElement('h3')          
+        const species = document.createElement('h3')        
+        const origin = document.createElement('h3')
+        const post = document.getElementById('characterCard')
+
         const id = document.getElementById('characterNumber').value
         const characterURL = `https://rickandmortyapi.com/api/character/${id}`
         fetch(characterURL)
         .then(res => res.json())
         .then(data => {
-            const post = document.getElementById('characterCard')
-            const div = document.createElement('div')
             div.classList.add('character')
-            const img = document.createElement('img')
-            const name = document.createElement('h2')
-            const gender = document.createElement('h3')
-            const status = document.createElement('h3')
-            const species = document.createElement('h3')
-            const origin = document.createElement('h3')
             img.src = data.image
             name.textContent = data.name
             gender.textContent = `Gender: ${data.gender}`
