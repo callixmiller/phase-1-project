@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('https://rickandmortyapi.com/api/character')
         .then(res => res.json())
         .then(data => {
-            let array = data.results
-            const characters = array.map((obj) => obj.name)
+            let characterNames = data.results
+            const characters = characterNames.map((obj) => obj.name)
             const ol = document.getElementById('characters')
             characters.map(name => {
                 const li = document.createElement('li')
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    const characterInfo = document.querySelector('.getCharacter')
+    const characterInfo = document.querySelector('.getCharactersCard')
     characterInfo.addEventListener('submit', e => {
         e.preventDefault()
         
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const status = document.createElement('h3')          
         const species = document.createElement('h3')        
         const origin = document.createElement('h3')
-        const post = document.getElementById('characterCard')
+        const post = document.getElementById('characterCardHolder')
 
         const id = document.getElementById('characterNumber').value
         const characterURL = `https://rickandmortyapi.com/api/character/${id}`
@@ -53,4 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   
     getCharacters()
-} )
+})

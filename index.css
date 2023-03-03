@@ -1,10 +1,10 @@
 body {
-    background-color: #42B540FF;
+    background-color: green;
     font-family: cursive;
     text-align: center;
 }
 
-#characterCard {
+#characterCardHolder {
     align-items: center;
     color: white;
     display: flex;
