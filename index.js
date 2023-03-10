@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const characterList = document.querySelector('ol')
     characterList.addEventListener('click', e => {
         if(e.target.matches('li')) {
-            e.target.style.color = 'red'
+            e.target.style.color != 'red' ? e.target.style.color = 'red' : e.target.style.color = 'black'
         }
     })
   
