@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const status = document.createElement('h3')          
         const species = document.createElement('h3')        
         const origin = document.createElement('h3')
+        const btn = document.createElement('button')
         const post = document.getElementById('characterCardHolder')
 
         const id = document.getElementById('characterNumber').value
@@ -35,11 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
             div.classList.add('character')
             img.src = data.image
             name.textContent = data.name
+            btn.textContent = 'remove'
+            btn.addEventListener('click', deleteCard)
             gender.textContent = `Gender: ${data.gender}`
             status.textContent = `Status: ${data.status}`
             species.textContent = `Species: ${data.species}`
             origin.textContent = `Origin: ${data.origin.name}`
-            div.append(img, name, gender, status, species, origin)
+            div.append(img, name, gender, status, species, origin, btn)
             post.append(div)
         })
         characterInfo.reset()
@@ -54,3 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     getCharacters()
 })
+
+function deleteCard (e) {
+    e.target.parentNode.remove()
+}
